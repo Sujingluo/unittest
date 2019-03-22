@@ -1,0 +1,95 @@
+[
+  {
+    "request" :
+      {
+        "uri" : "/",
+		"method" : "get"
+      },
+    "response" :
+      {
+        "text" : "mock server started"
+      }
+  },
+  {
+    "request" :
+      {
+        "uri" : "/posts",
+		"method" : "get"
+      },
+    "response" :
+      {
+        "file" : "all_posts.json"	
+      }
+  },
+  {
+    "request" :
+      {
+        "method" : "get",
+		"uri" : "/posts/1"
+      },
+    "response" :
+      {
+        "file" : "posts_1.json"
+      }
+  },
+  {
+    "request" :
+      {
+        "method" : "get",
+		"uri" : "/posts/2"
+      },
+    "response" :
+      {
+        "file" : "posts_2.json"
+      }
+  },
+  {
+    "request" :
+      {
+        "method" : "get",
+		"uri" : "/posts/3"
+      },
+    "response" :
+      {
+        "file" : "posts_3.json"
+      }
+  },
+  {
+    "request" :
+      {
+        "method" : "get",
+		"uri" : "/posts/3/comments"
+      },
+    "response" :
+      {
+        "file" : "posts_3_comments.json"
+      }
+  },
+  {
+    "request" :
+      {
+        "method" : "get",
+		"uri" : "/temp"
+      },
+    "response" :
+      {
+        "text" : {
+			"template" : "post_${req.queries['limit']}"
+		}
+      }
+  },
+  {
+    "request" :
+      {
+        "method" : "post",
+		"uri" : "/posttest",
+		"file" : {
+			"json" : "create_post.json"
+		}
+      },
+    "response" :
+      {
+        "json" : {"success" : "true"}
+      }
+  }
+]

@@ -1,0 +1,5 @@
+
+java -jar moco-runner-0.12.0-standalone.jar  http -p 12306 -c config.json
+
+
+定义一个虚拟的接口，方便进行测试
